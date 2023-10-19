@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Survey System</h1>
+    </header>
+    <main>
+        <form id="surveyForm">
+            <div class="question">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <form action="processsurvey.php" method="post">
+        
+                <!-- Demographic Information -->
+                <h2>Demographic Information</h2>
+                <label for="age">Age:</label>
+                <input type="text" name="age" id="age"><br>
+                <label for="gender">Gender:</label>
+                <input type="radio" name="gender" value="male" id="gender"> Male
+                <input type="radio" name="gender" value="female" id="gender"> Female
+                <input type="radio" name="gender" value="other" id="gender"> Other<br><br>
+                <label for="location">Location:</label>
+                <input type="text" name="location" id="location"><br>
+                <label for="occupation">Occupation:</label>
+                <input type="text" name="occupation" id="occupation"><br>
+                <label for="income">Income per annum:</label>
+                <input type="text" name="income" id="income"><br>
+                
+                <!-- Contact Information -->
+                <h2>Contact Information</h2>
+                <label for="name">Name:</label>
+                <input type="text" name="name" id="name"><br>
+                <label for="email">Email address:</label>
+                <input type="email" name="email" id="email"><br>
+                <label for="phone">Phone number (optional):</label>
+                <input type="tel" name="phone" id="phone"><br>
+                
+                <!-- Service Satisfaction -->
+                <h2>Service Satisfaction</h2>
+                <label for="overall-satisfaction">Overall satisfaction with the Service:</label>
+                <input type="number" name="overall-satisfaction" id="overall-satisfaction" min="1" max="10"><br>
+                <label for="product-quality">Product Quality:</label>
+                <input type="number" name="product-quality" id="product-quality" min="1" max="10"><br>
+                <label for="customer-support">Customer Support:</label>
+                <input type="number" name="customer-support" id="customer-support" min="1" max="10"><br>
+                <label for="delivery-speed">Delivery Speed:</label>
+                <input type="number" name="delivery-speed" id="delivery-speed" min="1" max="10"><br>
+                <label for="nps">Net Promoter Score (NPS):</label>
+                <input type="number" name="nps" id="nps" min="0" max="10"><br>
+                
+                <!-- Open-Ended Questions -->
+                <h2>Open-Ended Questions</h2>
+                <label for="likes">What do you like the most about our service?</label><br>
+                <textarea name="likes" id="likes" rows="4" cols="50"></textarea><br>
+                <label for="improvements">What areas need improvement?</label><br>
+                <textarea name="improvements" id="improvements" rows="4" cols="50"></textarea><br>
+                <label for="suggestions">Do you have any other comments or suggestions?</label><br>
+                <textarea name="suggestions" id="suggestions" rows="4" cols="50"></textarea><br>
+                
+                <!-- Additional Sections (Customer Experience, Product/Service Quality, etc.) -->
+            
+            <div class="question">
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="question">
+                <p>How satisfied are you with our service?</p>
+                <input type="radio" name="satisfaction" value="Very Satisfied" required> Very Satisfied
+                <input type="radio" name="satisfaction" value="Satisfied"> Satisfied
+                <input type="radio" name="satisfaction" value="Neutral"> Neutral
+                <input type="radio" name="satisfaction" value="Dissatisfied"> Dissatisfied
+                <input type="radio" name="satisfaction" value="Very Dissatisfied"> Very Dissatisfied
+            </div>
+            <div class="question">
+                <p>What do you like the most about our service? (Select one or more)</p>
+                <input type="checkbox" name="likes" value="Quality"> Quality
+                <input type="checkbox" name="likes" value="Price"> Price
+                <input type="checkbox" name="likes" value="Customer Service"> Customer Service
+                <input type="checkbox" name="likes" value="Variety"> Variety
+            </div>
+            <div class="question">
+                <br><label for="comments">Any additional comments:</label>
+                <textarea id="comments" name="comments" rows="4"></textarea>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2023 Survey System</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
